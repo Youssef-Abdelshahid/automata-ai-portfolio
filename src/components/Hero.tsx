@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import {
+  ArrowDown,
   ArrowRight,
   ArrowUpRight,
   BrainCircuit,
@@ -73,8 +74,9 @@ export function Hero() {
                   return (
                     <div key={step.label} className="relative">
                       {index < workflowSteps.length - 1 ? (
-                        <span className="absolute -right-3 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-violet-300/30 bg-midnight p-1 text-violetGlow md:flex">
-                          <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                        <span className="absolute -bottom-[1.125rem] left-1/2 z-10 flex -translate-x-1/2 items-center justify-center rounded-full border border-violet-300/30 bg-midnight p-1 text-violetGlow md:bottom-auto md:left-auto md:-right-3 md:top-1/2 md:translate-x-0 md:-translate-y-1/2">
+                          <ArrowDown className="h-3.5 w-3.5 md:hidden" aria-hidden="true" />
+                          <ArrowRight className="hidden h-3.5 w-3.5 md:block" aria-hidden="true" />
                         </span>
                       ) : null}
                       <motion.div
