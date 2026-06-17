@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FileText, Github, Linkedin, Mail } from 'lucide-react';
 import { teamMembers } from '../data/siteData';
+import { asset } from '../lib/asset';
 import { Reveal } from './Reveal';
 import { SectionHeader } from './SectionHeader';
 
@@ -36,12 +37,12 @@ function Avatar({
       aria-label={`Portrait of ${name}`}
       className="mx-auto h-16 w-16 rounded-full border border-cyan-200/20 bg-cover bg-no-repeat shadow-cyan"
       style={{
-        backgroundImage: `url(${photo})`,
+        backgroundImage: `url(${asset(photo)})`,
         backgroundPosition: position ?? '50% 30%',
         backgroundSize: zoom ?? '135%',
       }}
     >
-      <img src={photo} alt="" className="h-0 w-0 opacity-0" loading="lazy" decoding="async" onError={() => setFailed(true)} />
+      <img src={asset(photo)} alt="" className="h-0 w-0 opacity-0" loading="lazy" decoding="async" onError={() => setFailed(true)} />
     </div>
   );
 }

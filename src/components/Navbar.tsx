@@ -1,6 +1,7 @@
-import { Menu, X } from 'lucide-react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { navItems, siteLinks } from '../data/siteData';
+import { asset } from '../lib/asset';
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -12,18 +13,18 @@ export function Navbar() {
           open ? 'rounded-3xl' : 'rounded-full'
         }`}
       >
-        <div className="flex items-center justify-between gap-3">
+        <div className="relative flex items-center justify-between gap-3">
           <a href="#overview" className="flex items-center gap-2 rounded-full px-2 py-1 text-sm font-bold text-white">
-            <img src="/logo.png" alt="Automata AI logo" width={36} height={36} className="h-9 w-9" />
+            <img src={asset('/logo.png')} alt="Automata AI logo" width={36} height={36} className="h-9 w-9" />
             <span>Automata AI</span>
           </a>
 
-          <div className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1 md:flex">
+          <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-7 md:flex">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="rounded-full px-3 py-2 text-xs font-semibold text-slate-300 transition hover:bg-white/10 hover:text-white"
+                className="relative py-1 text-sm font-semibold text-slate-300 transition-colors hover:text-white after:absolute after:-bottom-0.5 after:left-1/2 after:h-0.5 after:w-0 after:-translate-x-1/2 after:rounded-full after:bg-gradient-to-r after:from-violet-400 after:to-cyan-300 after:transition-all after:duration-300 hover:after:w-6"
               >
                 {item.label}
               </a>
@@ -33,9 +34,12 @@ export function Navbar() {
           <div className="hidden items-center gap-2 md:flex">
             <a
               href={siteLinks.website}
-              className="rounded-full border border-white/15 px-4 py-2 text-xs font-bold text-slate-100 transition hover:border-cyan-200/50 hover:bg-cyan-300/10"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-violet-500 to-cyan-400 px-4 py-2 text-xs font-extrabold text-white shadow-glow transition hover:scale-[1.03]"
             >
               Open Website
+              <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
             </a>
           </div>
 
