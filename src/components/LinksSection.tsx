@@ -19,6 +19,8 @@ export function LinksSection() {
             <a
               key={link.title}
               href={link.href}
+              target="_blank"
+              rel="noreferrer"
               className="glass group rounded-lg p-4 transition hover:-translate-y-1 hover:border-cyan-200/40"
             >
               <div className="mb-4 flex items-center justify-between">
@@ -28,7 +30,7 @@ export function LinksSection() {
                 <ArrowUpRight className="h-4 w-4 text-slate-400 transition group-hover:text-cyanGlow" />
               </div>
               <h3 className="text-base font-black text-white">{link.title}</h3>
-              <p className="mt-2 hidden break-words text-xs leading-5 text-slate-400 sm:block">{link.href}</p>
+              <p className="mt-2 text-xs leading-5 text-slate-400">{link.caption}</p>
             </a>
           );
         })}

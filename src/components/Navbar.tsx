@@ -1,4 +1,4 @@
-import { BrainCircuit, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { navItems, siteLinks } from '../data/siteData';
 
@@ -14,9 +14,7 @@ export function Navbar() {
       >
         <div className="flex items-center justify-between gap-3">
           <a href="#overview" className="flex items-center gap-2 rounded-full px-2 py-1 text-sm font-bold text-white">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-cyan-200/30 bg-white/5 text-cyanGlow">
-              <BrainCircuit className="h-5 w-5" aria-hidden="true" />
-            </span>
+            <img src="/logo.png" alt="Automata AI logo" width={36} height={36} className="h-9 w-9" />
             <span>Automata AI</span>
           </a>
 

@@ -55,12 +55,12 @@ export function Hero() {
       >
         <div className="absolute inset-x-10 -top-8 h-28 rounded-full bg-cyan-300/15 blur-3xl" />
         <div className="glass relative overflow-hidden rounded-2xl p-4 shadow-glow md:p-5">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(110,231,249,.13),transparent_28%),radial-gradient(circle_at_80%_35%,rgba(167,139,250,.16),transparent_30%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(161,96,235,.16),transparent_28%),radial-gradient(circle_at_80%_35%,rgba(136,72,215,.16),transparent_30%)]" />
           <div className="relative rounded-xl border border-white/10 bg-slate-950/45 p-4 md:p-5">
               <div className="flex flex-col gap-2 border-b border-white/10 pb-4 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <p className="text-xs font-bold uppercase text-cyanGlow">Simple journey</p>
-                  <h2 className="mt-1 text-xl font-black text-white md:text-2xl">From data to a working Edge AI demo.</h2>
+                  <h2 className="mt-1 text-xl font-black text-white md:text-2xl">From data to a working Edge AI.</h2>
                 </div>
                 <span className="w-fit rounded-full border border-violet-200/20 bg-violet-400/10 px-3 py-1 text-xs font-bold text-violet-100">
                   Expo ready
@@ -73,7 +73,9 @@ export function Hero() {
                   return (
                     <div key={step.label} className="relative">
                       {index < workflowSteps.length - 1 ? (
-                        <ArrowRight className="absolute -right-3 top-6 hidden h-5 w-5 text-cyan-200/40 md:block" aria-hidden="true" />
+                        <span className="absolute -right-3 top-1/2 z-10 hidden -translate-y-1/2 items-center justify-center rounded-full border border-violet-300/30 bg-midnight p-1 text-violetGlow md:flex">
+                          <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                        </span>
                       ) : null}
                       <motion.div
                         className="h-full rounded-lg border border-white/10 bg-white/[0.04] p-3 md:p-4"

@@ -43,14 +43,16 @@ type SimpleIconItem = {
 
 type LinkCard = SimpleIconItem & {
   href: string;
+  caption: string;
 };
 
 export const siteLinks = {
-  website: 'https://YOUR_WEBSITE_LINK_HERE',
-  github: 'https://github.com/YOUR_PROJECT_REPO_HERE',
-  paper: 'https://YOUR_PAPER_LINK_HERE',
-  video: 'https://YOUR_DEMO_VIDEO_LINK_HERE',
-  presentation: 'https://YOUR_PRESENTATION_LINK_HERE',
+  website: 'https://automataai.app',
+  github: 'https://github.com/Youssef-Abdelshahid/Automata-AI',
+  paper: 'https://drive.google.com/drive/folders/1miidTEiUC9B7SFGjivKZm6IsbzQEsKdz?usp=sharing',
+  video: 'https://drive.google.com/file/d/1ooWAQ_04NadJht2lgDcNhwbUo3AWYSH8/view?usp=sharing',
+  presentation:
+    'https://docs.google.com/presentation/d/17mfx1GNIrsT8DCFV9CJmZbHRb6ZNazGL/edit?usp=sharing&ouid=112428749247863205887&rtpof=true&sd=true',
 };
 
 export const navItems = [
@@ -183,19 +185,81 @@ export const outputItems = [
 ] satisfies SimpleIconItem[];
 
 export const demoLinks = [
-  { icon: 'globe', title: 'Product Website', href: siteLinks.website },
-  { icon: 'github', title: 'GitHub Repository', href: siteLinks.github },
-  { icon: 'file', title: 'Documentations', href: siteLinks.paper },
-  { icon: 'video', title: 'Demo Video', href: siteLinks.video },
-  { icon: 'activity', title: 'Presentation', href: siteLinks.presentation },
+  { icon: 'globe', title: 'Product Website', href: siteLinks.website, caption: 'Try the live platform' },
+  { icon: 'github', title: 'GitHub Repository', href: siteLinks.github, caption: 'Browse the source code' },
+  { icon: 'file', title: 'Documentation', href: siteLinks.paper, caption: 'Read the project docs' },
+  { icon: 'video', title: 'Demo Video', href: siteLinks.video, caption: 'Watch it in action' },
+  { icon: 'activity', title: 'Presentation', href: siteLinks.presentation, caption: 'View the slides' },
 ] satisfies LinkCard[];
 
-export const teamMembers = [
-  { name: 'Youssef Mohamed', role: 'Team Leader', linkedin: 'https://linkedin.com/in/USERNAME', github: 'https://github.com/USERNAME', email: 'mailto:EMAIL_HERE' },
-  { name: 'Ammar Alaa', role: 'Team Member', linkedin: 'https://linkedin.com/in/USERNAME', github: 'https://github.com/USERNAME', email: 'mailto:EMAIL_HERE' },
-  { name: 'Adham Mohamed', role: 'Team Member', linkedin: 'https://linkedin.com/in/USERNAME', github: 'https://github.com/USERNAME', email: 'mailto:EMAIL_HERE' },
-  { name: 'Ahmed Elghazouly', role: 'Team Member', linkedin: 'https://linkedin.com/in/USERNAME', github: 'https://github.com/USERNAME', email: 'mailto:EMAIL_HERE' },
-  { name: 'Ahmed Samer', role: 'Team Member', linkedin: 'https://linkedin.com/in/USERNAME', github: 'https://github.com/USERNAME', email: 'mailto:EMAIL_HERE' },
+export type TeamMember = {
+  name: string;
+  role: string;
+  photo: string;
+  photoPosition?: string;
+  photoZoom?: string;
+  linkedin: string;
+  github: string;
+  email: string;
+  cv: string;
+};
+
+export const teamMembers: TeamMember[] = [
+  {
+    name: 'Youssef Mohamed',
+    role: 'Team Leader',
+    photo: '/team/youssef.jpg',
+    photoPosition: '50% 53%',
+    photoZoom: '218%',
+    linkedin: 'https://linkedin.com/in/youssef-mohamed-a5a61326b',
+    github: 'https://github.com/Youssef-Abdelshahid',
+    email: 'mailto:youssefmoshahid@gmail.com',
+    cv: 'https://drive.google.com/file/d/1U7gd2qnt-KQosVpYKl4xWJWH1r66_m-5/view?usp=sharing',
+  },
+  {
+    name: 'Adham Mohamed',
+    role: 'Team Member',
+    photo: '/team/adham.jpg',
+    photoPosition: '50% 36%',
+    photoZoom: '138%',
+    linkedin: 'https://www.linkedin.com/in/adham-m-722379282',
+    github: 'https://github.com/Adham-Mohamed-lo',
+    email: 'mailto:Adhammohamed1300@gmail.com',
+    cv: 'https://drive.google.com/file/d/1j3tilg-zAzYDOkQs5qeE6iabsHLD5-w1/view?usp=sharing',
+  },
+  {
+    name: 'Ahmed Elghazouly',
+    role: 'Team Member',
+    photo: '/team/ahmed-elghazouly.jpg',
+    photoPosition: '52% 40%',
+    photoZoom: '140%',
+    linkedin: 'https://www.linkedin.com/in/ahmed-elghazouly-0b0926269',
+    github: 'https://github.com/Ahmed-Elghazouly',
+    email: 'mailto:ahmedelghazouly10@gmail.com',
+    cv: 'https://drive.google.com/file/d/1gtiu2YjtpjK0RU8yKrdMxOXvNGPchldV/view?usp=sharing',
+  },
+  {
+    name: 'Ahmed Samer',
+    role: 'Team Member',
+    photo: '/team/ahmed-samer.jpg',
+    photoPosition: '50% 33%',
+    photoZoom: '125%',
+    linkedin: 'https://www.linkedin.com/in/ahmed-samer-sayed',
+    github: 'https://github.com/Samortchy',
+    email: 'mailto:ahmedsamersayed22@gmail.com',
+    cv: 'https://drive.google.com/file/d/1cdHSBYC-DZvXp7Sr3DpGoCuQftKn_sI2/view?usp=sharing',
+  },
+  {
+    name: 'Ammar Alaa',
+    role: 'Team Member',
+    photo: '/team/ammar.jpg',
+    photoPosition: '50% 26%',
+    photoZoom: '250%',
+    linkedin: 'https://www.linkedin.com/in/ammar-bektash-a44833268',
+    github: 'https://github.com/ABektash',
+    email: 'mailto:ammarbektash@gmail.com',
+    cv: 'https://drive.google.com/file/d/1XADJxo5vIoDgKNgttx18QiRB68zbEDrI/view?usp=sharing',
+  },
 ];
 
 export const finalCta = {

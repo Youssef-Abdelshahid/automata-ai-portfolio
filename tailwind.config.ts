@@ -5,22 +5,37 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#080D19',
-        midnight: '#0B1020',
-        panel: '#101827',
-        cyanGlow: '#6EE7F9',
-        violetGlow: '#A78BFA',
+        ink: '#0F1724',
+        midnight: '#121C2B',
+        panel: '#151F30',
+        cyanGlow: '#C9A4F5',
+        violetGlow: '#A160EB',
+        cyan: {
+          100: '#EDE4FB',
+          200: '#C9A4F5',
+          300: '#A160EB',
+          400: '#8848D7',
+          500: '#7C3AED',
+        },
+        violet: {
+          100: '#EDE4FB',
+          200: '#C9A4F5',
+          300: '#B98DF0',
+          400: '#A160EB',
+          500: '#9333DA',
+          600: '#8848D7',
+        },
       },
       boxShadow: {
-        glow: '0 0 34px rgba(124, 58, 237, 0.28)',
-        cyan: '0 0 28px rgba(34, 211, 238, 0.18)',
+        glow: '0 0 34px rgba(161, 96, 235, 0.30)',
+        cyan: '0 0 28px rgba(161, 96, 235, 0.20)',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'radial-glow':
-          'radial-gradient(circle at 35% 20%, rgba(124,58,237,.28), transparent 34%), radial-gradient(circle at 78% 12%, rgba(34,211,238,.16), transparent 26%), linear-gradient(180deg, #080D19 0%, #0B1020 44%, #070A12 100%)',
+          'radial-gradient(circle at 50% 6%, rgba(161,96,235,.30), transparent 40%), radial-gradient(circle at 84% 30%, rgba(136,72,215,.14), transparent 30%), radial-gradient(circle at 16% 32%, rgba(124,58,237,.13), transparent 30%), linear-gradient(180deg, #0F1724 0%, #121C2B 44%, #0B1320 100%)',
       },
       keyframes: {
         float: {
