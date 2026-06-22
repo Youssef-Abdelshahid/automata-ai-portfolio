@@ -9,7 +9,7 @@ export function Navbar() {
   return (
     <header className="fixed left-0 right-0 top-4 z-50 px-4">
       <nav
-        className={`mx-auto max-w-6xl border border-white/10 bg-slate-950/70 px-3 py-2 shadow-glow backdrop-blur-xl transition-[border-radius] md:rounded-full ${
+        className={`mx-auto max-w-6xl border border-white/10 bg-slate-950/85 px-3 py-2 shadow-glow transition-[border-radius] md:rounded-full ${
           open ? 'rounded-3xl' : 'rounded-full'
         }`}
       >
