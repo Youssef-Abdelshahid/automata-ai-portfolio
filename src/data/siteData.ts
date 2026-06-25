@@ -52,7 +52,7 @@ export const siteLinks = {
   paper: 'https://drive.google.com/drive/folders/1miidTEiUC9B7SFGjivKZm6IsbzQEsKdz?usp=sharing',
   video: 'https://drive.google.com/drive/folders/1RfCyFDKs-aV7ohHxh1vSonuKuZbSewzj?usp=sharing',
   presentation:
-    'https://docs.google.com/presentation/d/17mfx1GNIrsT8DCFV9CJmZbHRb6ZNazGL/edit?usp=sharing&ouid=112428749247863205887&rtpof=true&sd=true',
+    'https://docs.google.com/presentation/d/1Q6Lxze4zpw9ptBJ5GXs7GQx9G07_uWJe/edit?usp=sharing&ouid=112428749247863205887&rtpof=true&sd=true',
 };
 
 export const navItems = [
@@ -236,7 +236,7 @@ export const teamMembers: TeamMember[] = [
     linkedin: 'https://www.linkedin.com/in/ahmed-elghazouly-0b0926269',
     github: 'https://github.com/Ahmed-Elghazouly',
     email: 'mailto:ahmedelghazouly10@gmail.com',
-    cv: 'https://drive.google.com/file/d/1gtiu2YjtpjK0RU8yKrdMxOXvNGPchldV/view?usp=sharing',
+    cv: 'https://drive.google.com/file/d/1dpcOx_TJJd61SapcNZexcP5aDEtA3AZu/view?usp=sharing',
   },
   {
     name: 'Ahmed Samer',
